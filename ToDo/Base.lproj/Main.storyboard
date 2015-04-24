@@ -45,6 +45,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="toDoListTable" destination="G3T-mw-6Hl" id="RQO-f1-xhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

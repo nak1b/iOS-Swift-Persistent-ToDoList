@@ -12,6 +12,7 @@ var toDoList = [String]()
 
 class FirstViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var toDoListTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil{
@@ -30,6 +31,18 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         cell.textLabel?.text = toDoList[indexPath.row]
         return cell
     }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        
+        if(editingStyle == UITableViewCellEditingStyle.Delete){
+            toDoList.removeAtIndex(indexPath.row)
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+            toDoListTable.reloadData()
+            
+        }
+        
+    }
+    
     
 
     override func didReceiveMemoryWarning() {
