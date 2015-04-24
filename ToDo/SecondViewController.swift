@@ -25,7 +25,10 @@ class SecondViewController: UIViewController,UITextFieldDelegate {
 
     @IBAction func addItem(sender: UIButton) {
         if(!todoItem.text.isEmpty){
-            //add it to the view
+            toDoList.append(todoItem.text)
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+            
+            todoItem.text = ""
         }
         
     }
@@ -36,7 +39,7 @@ class SecondViewController: UIViewController,UITextFieldDelegate {
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        todoItem.resignFirstResponder()
+        self.view.endEditing(true)
     }
 
 }

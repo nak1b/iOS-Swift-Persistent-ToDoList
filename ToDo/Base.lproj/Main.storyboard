@@ -18,27 +18,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G3T-mw-6Hl">
-                                <rect key="frame" x="0.0" y="25" width="600" height="518"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="c6O-fk-xZz"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="1T8-3O-5Ea"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8j-oU-plt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="To Do List" id="ZRx-M6-CnV"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="G3T-mw-6Hl" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="25" id="BEf-4J-6bc"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="G3T-mw-6Hl" secondAttribute="bottom" constant="8" id="iUH-pX-ivd"/>
+                            <constraint firstItem="K8j-oU-plt" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="HjU-0r-1Af"/>
+                            <constraint firstItem="K8j-oU-plt" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="OU4-jo-9y1"/>
+                            <constraint firstItem="K8j-oU-plt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="i4U-EG-k8t"/>
                             <constraint firstAttribute="trailing" secondItem="G3T-mw-6Hl" secondAttribute="trailing" id="l9y-eY-AqA"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="G3T-mw-6Hl" secondAttribute="bottom" id="lsp-JY-FNd"/>
                             <constraint firstItem="G3T-mw-6Hl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="nRt-ax-fWu"/>
+                            <constraint firstItem="G3T-mw-6Hl" firstAttribute="top" secondItem="K8j-oU-plt" secondAttribute="bottom" id="oqo-iW-SVb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K8j-oU-plt" secondAttribute="trailing" constant="-16" id="rfX-i4-f4f"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="806" y="-339"/>
         </scene>
         <!--Add Task-->
         <scene sceneID="wg7-f3-ORb">
